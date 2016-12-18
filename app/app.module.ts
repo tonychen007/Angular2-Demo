@@ -9,3 +9,4 @@ import { PeopleComponent }   from './people.component';
   bootstrap:    [ AppComponent,PeopleComponent ]
 })
 export class AppModule { }
+
