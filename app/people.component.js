@@ -9,20 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var people_component_1 = require("./people.component");
-var AppModule = (function () {
-    function AppModule() {
+var PeopleComponent = (function () {
+    function PeopleComponent() {
+        this.title = 'Tour of Heroes';
+        this.heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+        this.myHero = this.heroes[0];
     }
-    return AppModule;
+    return PeopleComponent;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, people_component_1.PeopleComponent],
-        bootstrap: [app_component_1.AppComponent, people_component_1.PeopleComponent]
+PeopleComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app2',
+        template: "\n    \t<h1>{{title}}</h1>\n    \t<h2>My favorite hero is: {{myHero}}</h2>\n    \t<p>Heroes:</p>\n    \t<ul>\n      \t\t<li *ngFor=\"let hero of heroes\">\n        \t\t{{ hero }}\n     \t \t</li>\n    \t</ul>\n  \t"
     }),
     __metadata("design:paramtypes", [])
-], AppModule);
-exports.AppModule = AppModule;
+], PeopleComponent);
+exports.PeopleComponent = PeopleComponent;
